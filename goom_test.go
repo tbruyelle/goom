@@ -24,5 +24,7 @@ func TestGet(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Get() returns an error %s", err)
 	}
-	fmt.Println(cmd)
+	if len(cmd) == 0 {
+		t.Error("Should return value")
+	}
 }
